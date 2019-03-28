@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Notes.NotePage">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Label Text="Название заметки" Margin="5,0,0,0"/>
+                <Entry x:Name="entry" Text="{Binding Name}"/>
+                <Label Text="Заметка" Margin="5,0,0,0"/>
+                <Editor x:Name="edtEdit" Text="{Binding Text}"  AutoSize="TextChanges"/>
+                <StackLayout>
+                    <Button x:Name="btnSave" Text="Сохранить" Clicked="SaveNote" BackgroundColor="LightGreen"/>
+                    <Button x:Name="btnDelete" Text="Удалить" Clicked="DeleteNote" BackgroundColor="Red"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
